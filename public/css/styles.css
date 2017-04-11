@@ -8,7 +8,10 @@
   padding: 5px; }
 
 #homepage {
-  background-color: blue; }
+  background-color: blue;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap; }
 
 body {
   background: url(/assets/bg.jpg); }
