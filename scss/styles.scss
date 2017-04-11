@@ -1,4 +1,14 @@
+
+$main: url(/assets/bg.jpg);
+$fb_grey: url(/assets/facebook_grey.svg);
+$header: url(/assets/header_bg.svg);
+$instagram_grey: url(/assets/instagram_grey.svg);
+$instagram_orange: url(/assets/instagram_orange.svg);
+$logo: url(/assets/logo.svg);
+
+@import "partials/header";
+
+
 body{
-  background: url(/assets/bg.jpg);
-  //background-color: blue;
+  background: $main;
 }
