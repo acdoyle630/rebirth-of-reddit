@@ -7,5 +7,8 @@
   font-weight: bold;
   padding: 5px; }
 
+#homepage {
+  background-color: blue; }
+
 body {
   background: url(/assets/bg.jpg); }

@@ -8,7 +8,7 @@ window.addEventListener('load', snowboard);
 function snowboard(){
   oReq = new XMLHttpRequest();
   oReq.addEventListener('load', updateDisplay);
-  oReq.open('GET', 'http://www.reddit.com/r/chibears.json');
+  oReq.open('GET', 'http://www.reddit.com/r/gifs.json');
   oReq.send();
 }
 
@@ -26,17 +26,23 @@ function updateDisplay(){
 
 function selfPic(){
   const pic = document.createElement('IMG');
+  const picFrame = document.createElement('div');
+  picFrame.class = 'content';
   pic.setAttribute('src', 'https://cdn.worldvectorlogo.com/logos/reddit-2.svg');
   pic.setAttribute('width', '300');
   pic.setAttribute('height', '300');
-  document.body.appendChild(pic);
+  picFrame.appendChild(pic);
+  homepage.appendChild(picFrame);
 }
 
 function thumbPic(picture){
   const pic = document.createElement('IMG');
+  const picFrame = document.createElement('div');
+  picFrame.class = 'content';
   pic.setAttribute('src', picture);
   pic.setAttribute('width', '300');
   pic.setAttribute('height', '300');
-  document.body.appendChild(pic);
+  picFrame.appendChild(pic);
+  homepage.appendChild(picFrame);
 }
 
