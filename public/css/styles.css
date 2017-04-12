@@ -8,10 +8,17 @@
   padding: 5px; }
 
 #homepage {
-  background-color: blue;
+  background-color: main; }
+
+.frameContent {
   display: flex;
-  justify-content: flex-start;
-  flex-wrap: wrap; }
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  background-color: main;
+  padding: 10px; }
+
+.titleContent {
+  padding: 10px; }
 
 body {
   background: url(/assets/bg.jpg); }

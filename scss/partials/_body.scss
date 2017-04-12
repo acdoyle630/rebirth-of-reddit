@@ -1,7 +1,15 @@
 #homepage{
-  background-color: blue;
-  display: flex;
-  justify-content: flex-start;
-  flex-wrap: wrap;
+  background-color: main;
 }
 
+.frameContent{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  background-color: main;
+  padding: 10px;
+}
+
+.titleContent{
+  padding: 10px;
+}
