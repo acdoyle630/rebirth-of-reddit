@@ -8,3 +8,29 @@
   padding: 5px;
 }
 
+#header{
+  background-color:white;
+  padding: 0px;
+  width: 100%;
+  }
+
+#subreddit{
+  font-size: 30px;
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+
+#search{
+  display: flex;
+  justify-content: flex-start;
+  #searchButton{
+    display: flex;
+    font-size: 20px;
+    margin: 10px;
+  }
+  #searchBar{
+    display: flex;
+    font-size: 20px;
+    margin: 10px;
+  }
+}

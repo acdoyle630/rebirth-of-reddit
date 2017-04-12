@@ -7,18 +7,60 @@
   font-weight: bold;
   padding: 5px; }
 
-#homepage {
-  background-color: main; }
+#header {
+  background-color: white;
+  padding: 0px;
+  width: 100%; }
 
-.frameContent {
+#subreddit {
+  font-size: 30px;
+  font-weight: bold;
+  padding-bottom: 20px; }
+
+#search {
   display: flex;
-  flex-direction: row-reverse;
-  justify-content: flex-end;
-  background-color: main;
-  padding: 10px; }
+  justify-content: flex-start; }
+  #search #searchButton {
+    display: flex;
+    font-size: 20px;
+    margin: 10px; }
+  #search #searchBar {
+    display: flex;
+    font-size: 20px;
+    margin: 10px; }
 
-.titleContent {
-  padding: 10px; }
+#homepage {
+  display: flex;
+  flex-direction: rows;
+  flex-wrap: wrap;
+  background-color: main;
+  justify-content: center; }
+  #homepage .frameContent {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: space-between;
+    background-color: main;
+    width: 600px;
+    height: 300px;
+    border: 1px black solid;
+    margin: 40px;
+    background-color: white; }
+    #homepage .frameContent .titleContent {
+      display: flex;
+      justify-content: center;
+      padding: 10px; }
+    #homepage .frameContent .thumbnailContent {
+      display: flex;
+      align-items: center;
+      border: black solid 1px;
+      margin-top: 5px; }
+
+.navButton {
+  background-color: black;
+  color: white;
+  height: 75px;
+  width: 175px; }
 
 body {
   background: url(/assets/bg.jpg); }

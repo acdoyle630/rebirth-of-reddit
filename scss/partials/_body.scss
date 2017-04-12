@@ -1,15 +1,37 @@
 #homepage{
-  background-color: main;
-}
-
-.frameContent{
   display: flex;
-  flex-direction: row-reverse;
-  justify-content: flex-end;
+  flex-direction: rows;
+  flex-wrap: wrap;
   background-color: main;
-  padding: 10px;
+  justify-content: center;
+  .frameContent{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items:center;
+    justify-content: space-between;
+    background-color: main;
+    width: 600px;
+    height: 300px;
+    border: 1px black solid;
+    margin:40px;
+    background-color:white;
+    .titleContent{
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+    }
+    .thumbnailContent{
+      display: flex;
+      align-items: center;
+      border:black solid 1px;
+      margin-top: 5px;
+    }
+  }
 }
 
-.titleContent{
-  padding: 10px;
-}
+    .navButton{
+      background-color: black;
+      color: white;
+      height: 75px;
+      width: 175px;
+    }
