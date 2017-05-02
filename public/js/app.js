@@ -12,7 +12,6 @@ const searchButton = document.querySelector('#searchButton');
 const subreddit = document.querySelector('#subreddit');
 
 searchButton.addEventListener('click', function(){
-//reload page with new homePage
   homeScreen.innerHTML = '';
   homePage = search.value;
   subreddit.innerHTML = homePage;
@@ -32,7 +31,7 @@ myBoards.addEventListener('click', function(){
 function pageLoad(){
   oReq = new XMLHttpRequest();
   oReq.addEventListener('load', updateDisplay);
-  oReq.open('GET', 'http://www.reddit.com/r/'+ homePage +'.json');
+  oReq.open('GET', `http://www.reddit.com/r/${homePage}.json`);
   oReq.send();
 }
 
@@ -40,7 +39,7 @@ function updateDisplay(){
   const requestData = JSON.parse(this.responseText);
   console.log(requestData.data.children);
   for(var i = 0; i<requestData.data.children.length; i++){
-    if(requestData.data.children[i].data.thumbnail === 'self'){
+    if(requestData.data.children[i].data.thumbnail === 'self' || requestData.data.children[i].data.thumbnail === 'default'){
       selfPic(requestData.data.children[i].data);
     } else {
       thumbPic(requestData.data.children[i].data);
@@ -58,6 +57,10 @@ function selfPic(picture){
   const title = document.createElement('p');
   title.className = 'titleContent';
   title.innerHTML = picture.title;
+  title.addEventListener('click', function(){
+    console.log(picture.permalink);
+    window.open(`http://www.reddit.com${picture.permalink}`);
+  });
   picFrame.appendChild(title);
 
   //set thumbnail display
@@ -84,7 +87,14 @@ function thumbPic(picture){
   //create title
   const title = document.createElement('p');
   title.className = 'titleContent';
+  title.clicked = false;
   title.innerHTML = picture.title;
+  title.addEventListener('click', function(){
+    console.log(picture.author);
+    window.open('http://www.reddit.com'+picture.permalink);
+    title.clicked = true;
+    console.log(title.clicked);
+  });
   picFrame.appendChild(title);
 
   //set thumbnail display
@@ -92,6 +102,9 @@ function thumbPic(picture){
   pic.setAttribute('width', '200');
   pic.setAttribute('height', '200');
   pic.className = 'thumbnailContent';
+  pic.addEventListener('click', function(){
+    window.open(picture.preview.images[0].source.url);
+  });
   picFrame.appendChild(pic);
   homepage.appendChild(picFrame);
 
@@ -101,4 +114,5 @@ function thumbPic(picture){
   author.innerHTML = picture.author;
   title.appendChild(author);
 }
+
 

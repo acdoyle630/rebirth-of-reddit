@@ -24,10 +24,15 @@
     display: flex;
     font-size: 20px;
     margin: 10px; }
+  #search #searchButton:hover {
+    cursor: pointer; }
   #search #searchBar {
     display: flex;
     font-size: 20px;
     margin: 10px; }
+
+.navButton:hover {
+  cursor: pointer; }
 
 #homepage {
   display: flex;
@@ -50,17 +55,25 @@
       display: flex;
       justify-content: center;
       padding: 10px; }
+    #homepage .frameContent .titleContent:hover {
+      cursor: pointer; }
     #homepage .frameContent .thumbnailContent {
       display: flex;
       align-items: center;
       border: black solid 1px;
       margin-top: 5px; }
+    #homepage .frameContent .thumbnailContent:hover {
+      cursor: pointer; }
 
 .navButton {
   background-color: black;
   color: white;
   height: 75px;
   width: 175px; }
+
+#footer {
+  height: 20px;
+  background: white; }
 
 body {
   background: url(/assets/bg.jpg); }
